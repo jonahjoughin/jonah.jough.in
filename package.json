@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jonahjoughin/joughin#readme",
   "dependencies": {
+    "aphrodite": "^1.2.1",
     "next": "^2.4.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"

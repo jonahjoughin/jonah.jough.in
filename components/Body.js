@@ -7,6 +7,7 @@ class Body extends React.Component {
   render() {
     return (
       <div>
+        <img src="../static/img/logo.png"/>
       </div>
     )
   }
