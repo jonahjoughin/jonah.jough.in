@@ -1,0 +1,19 @@
+{
+  "name": "joughin",
+  "version": "1.0.0",
+  "description": "Personal site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonahjoughin/joughin.git"
+  },
+  "author": "Jonah Joughin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonahjoughin/joughin/issues"
+  },
+  "homepage": "https://github.com/jonahjoughin/joughin#readme"
+}
