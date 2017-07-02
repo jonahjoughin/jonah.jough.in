@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/jonahjoughin/joughin/issues"
   },
-  "homepage": "https://github.com/jonahjoughin/joughin#readme"
+  "homepage": "https://github.com/jonahjoughin/joughin#readme",
+  "dependencies": {
+    "next": "^2.4.6",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
