@@ -6,8 +6,17 @@ class Body extends React.Component {
   }
   render() {
     return (
-      <div>
-        <img src="../static/img/logo.png"/>
+      <div className="root">
+      <style jsx>{`
+        .root {
+          background-color: #EEE;
+          height: 64px;
+          width: 100vw;
+          max-width: 960px;
+          margin: auto;
+          height: 1000px;
+        }
+      `}</style>
       </div>
     )
   }
