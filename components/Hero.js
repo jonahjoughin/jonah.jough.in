@@ -7,7 +7,7 @@ import HeroTitle from './HeroTitle.js';
 export default () => (
   <div className="root">
     <div className="overlay" />
-    <img src="../static/img/defaultHero2.jpg"/>
+    <img src="../static/img/defaultHero4.jpg"/>
     <div className="info">
       <HeroTitle text="A Week in Jordan"></HeroTitle>
       <Author name="Jonah Joughin"/>
