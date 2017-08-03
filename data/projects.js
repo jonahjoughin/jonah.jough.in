@@ -1,6 +1,6 @@
-const SMALL = 330;
-const MEDIUM = 420;
-const LARGE = 510;
+const SMALL = 300;
+const MEDIUM = 400;
+const LARGE = 500;
 
 export default [
   {
@@ -14,7 +14,7 @@ export default [
   },
   {
     height: SMALL,
-    backgroundColor: "#01BC64",
+    backgroundColor: "#2CC853",
     title: "Communications Lab Portfolio",
     i:2, imageURL: '/static/images/link.png',
     link: "https://commlab.jough.in"

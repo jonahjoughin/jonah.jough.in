@@ -32,8 +32,8 @@ class Masonry extends React.Component {
         <Root>
           <Title>Projects</Title>
           <Content>
-            {hasWindow && this.state.columns && mapToColumns(Projects,this.state.columns).map((col,i) => (
-              <Column key={i}>
+            {mapToColumns(Projects,this.state.columns).map((col,i) => (
+              <Column key={i} hidden={!hasWindow || !this.state.columns}>
                 {col.items.map((child,i) => (
                   <MasonryItem data={child} key={i}/>
                 ))}
@@ -82,6 +82,7 @@ const Content = styled.div`
 `
 
 const Column = styled.div`
+  display: ${props => props.hidden ? 'none' : 'block'};
   margin: 0px 15px;
   flex: 1;
 `
@@ -99,7 +100,8 @@ const numberOfColumns = width => {
 }
 
 const mapToColumns = (children,n) => {
-  var columns = Array(n).fill().map(v => ({height:0,items:[]}))
+
+  var columns = Array(n || 1).fill().map(v => ({height:0,items:[]}))
     children.forEach(item => {
       const shortest = columns.reduce((minI, x, i, arr) => x.height < arr[minI].height ? i : minI, 0);
       columns[shortest].items.push(item);

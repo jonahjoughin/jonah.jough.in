@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default () => (
   <Root>
-    <Title>jonah<br/>joughin</Title>
+    <Title>Jonah<br/>Joughin</Title>
     <Item>Developer at <InlineLink href="http://www.mudawwanat.com">Mudawwanat</InlineLink></Item>
     <Item>Currently working on <InlineLink href="https://github.com/robwayne/hungrynyuad">HungryAtNYUAD</InlineLink></Item>
     <Item>Majoring in Computer Science and Interactive Media at <InlineLink href="https://nyuad.nyu.edu/en/">New York University Abu Dhabi</InlineLink></Item>
