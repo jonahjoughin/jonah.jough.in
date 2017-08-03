@@ -29,6 +29,7 @@ export default [
     height: MEDIUM,
     backgroundColor: "#841EFE",
     title: "This Page", i:4,
-    imageURL: '/static/images/jonahjoughin.png'
+    imageURL: '/static/images/jonahjoughin.png',
+    link: 'https://github.com/jonahjoughin/jonah.jough.in'
   },
 ]
