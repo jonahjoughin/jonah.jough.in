@@ -5,13 +5,17 @@ import Link from 'next/link'
 export default () => (
   <Root>
     <Title>jonah<br/>joughin</Title>
-    <Item>Developer at <InlineLink href="https://www.google.com">Mudawwanat</InlineLink></Item>
-    <Item>Currently working on <InlineLink href="https://www.google.com">HungryAtNYUAD</InlineLink></Item>
-    <Item>Majoring in Computer Science and Interactive Media at <InlineLink href="https://www.google.com">New York University Abu Dhabi</InlineLink></Item>
-    <Item>Lives in <InlineLink href="https://www.google.com">Abu Dhabi, UAE</InlineLink> and <InlineLink href="https://www.google.com">Seattle, WA</InlineLink></Item>
+    <Item>Developer at <InlineLink href="http://www.mudawwanat.com">Mudawwanat</InlineLink></Item>
+    <Item>Currently working on <InlineLink href="https://github.com/robwayne/hungrynyuad">HungryAtNYUAD</InlineLink></Item>
+    <Item>Majoring in Computer Science and Interactive Media at <InlineLink href="https://nyuad.nyu.edu/en/">New York University Abu Dhabi</InlineLink></Item>
+    <Item>Lives in <InlineLink href="https://goo.gl/maps/yBRYsTA8nAT2">Abu Dhabi, UAE</InlineLink> and <InlineLink href="https://goo.gl/maps/koGb78DWdAp">Seattle, WA</InlineLink></Item>
     <ButtonGroup>
-      <Button>Contact Me</Button>
-      <Button>Download CV</Button>
+      <a href="mailto:jonah@jough.in" target="_top">
+        <Button>Contact Me</Button>
+      </a>
+      <a href="/static/documents/jonah-joughin-cv.pdf" download>
+        <Button>Download CV</Button>
+      </a>
     </ButtonGroup>
   </Root>
 )
