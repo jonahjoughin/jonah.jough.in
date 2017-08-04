@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 export default ({data}) => {
   const height = data.height;
-  console.log(data)
   return (
     <a href={data.link}>
       <Root height={data.height.toString()+"px"} backgroundColor={data.backgroundColor} borderColor={data.borderColor}>
