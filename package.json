@@ -1,8 +1,10 @@
 {
-  "name": "joughin",
+  "name": "jonah.jough.in",
   "version": "1.0.0",
+  "description": "Personal Site",
   "main": "index.js",
   "repository": "https://github.com/jonahjoughin/jonah.jough.in.git",
+  "author": "Jonah Joughin",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "6.7.6",
