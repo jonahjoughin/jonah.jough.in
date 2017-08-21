@@ -2,7 +2,7 @@
   "name": "joughin",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/jonahjoughin/joughin.git",
+  "repository": "https://github.com/jonahjoughin/jonah.jough.in.git",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "6.7.6",
