@@ -6,7 +6,7 @@ export default ({data}) => {
   return (
     <a href={data.link}>
       <Root height={data.height.toString()+"px"} backgroundColor={data.backgroundColor} borderColor={data.borderColor}>
-        <Title color={data.color}>{data.title}</Title>
+        <Title color={data.textColor}>{data.title}</Title>
         <Img src={data.imageURL}/>
       </Root>
     </a>
@@ -31,7 +31,7 @@ const Root = styled.div`
 `
 
 const Title = styled.div`
-  font-family: 'Futura';
+  font-family: 'Titillium Web', sans-serif;
   font-size: 18px;
   font-weight: 600;
   text-align: center;

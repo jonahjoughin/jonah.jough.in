@@ -29,7 +29,7 @@ const Root = styled.div`
   max-width: 400px;
 `
 const Title = styled.div`
-  font-family: 'Futura';
+  font-family: 'Titillium Web', sans-serif;
   font-size: 36px;
   font-weight: bold;
   color: #6913FE;
@@ -40,7 +40,7 @@ const Title = styled.div`
   }
 `
 const Item = styled.div`
-  font-family: 'Futura';
+  font-family: 'Titillium Web', sans-serif;
   font-size: 20px;
   color: #111;
   margin: 5px 0px;
@@ -50,7 +50,7 @@ const Item = styled.div`
   }
 `
 const InlineLink = styled.a`
-  font-family: 'Futura';
+  font-family: 'Titillium Web', sans-serif;
   text-decoration: none;
   font-size: 20px;
   color: #6913FE;
@@ -61,7 +61,7 @@ const InlineLink = styled.a`
 `
 const Button = styled.div`
   background-color: #6913FE;
-  font-family: 'Futura';
+  font-family: 'Titillium Web', sans-serif;
   font-size: 20px;
   color: white;
   display: inline-block;

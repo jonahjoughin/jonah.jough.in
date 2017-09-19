@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import MasonryItem from './MasonryItem'
-import Projects from '../data/projects'
 
 class Masonry extends React.Component {
+
     constructor(props) {
       super(props)
       this.state = {}
@@ -32,10 +32,10 @@ class Masonry extends React.Component {
         <Root>
           <Title>Projects</Title>
           <Content>
-            {mapToColumns(Projects,this.state.columns).map((col,i) => (
+            {mapToColumns(this.props.projects,this.state.columns).map((col,i) => (
               <Column key={i} hidden={!hasWindow || !this.state.columns}>
-                {col.items.map((child,i) => (
-                  <MasonryItem data={child} key={i}/>
+                {col.items.map((child) => (
+                  <MasonryItem data={child} key={child.id}/>
                 ))}
               </Column>
             ))}
@@ -63,7 +63,7 @@ const Root = styled.div`
 `
 
 const Title = styled.h1`
-  font-family: 'Futura';
+  font-family: 'Titillium Web', sans-serif;
   font-size: 20px;
   color: #888;
   display: block;
