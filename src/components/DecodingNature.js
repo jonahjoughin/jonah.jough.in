@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import P5Wrapper from '../components/P5Wrapper'
-import Arrows from '../components/Arrows'
-import Title from '../components/Title'
+import Sketch from './Sketch'
+import Arrows from './reusable/Arrows'
+import Title from './Title'
 import cell from '../sketches/cell'
 import hurricane from '../sketches/hurricane'
 import rose from '../sketches/rose'
@@ -44,7 +44,7 @@ export default class extends React.Component {
     return(
       <div>
         <Root>
-          <P5Wrapper sketch={this.sketches[this.state.index].sketch}/>
+          <Sketch sketch={this.sketches[this.state.index].sketch}/>
           <TitleWrapper>
             <Title light={this.sketches[this.state.index].light}>
               {this.sketches[this.state.index].title+" ("+(this.state.index+1)+"/"+this.sketches.length+")"}

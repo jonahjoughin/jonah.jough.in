@@ -1,14 +1,8 @@
 {
+  "presets": ["env", "react"],
   "plugins": [
-    [
-      "wrap-in-js",
-      {
-        "extensions": ["css$", "scss$"]
-      }
-    ]
-  ],
-  "presets": [
-    "next/babel"
-  ],
-  "ignore": []
+    ["styled-components", {
+      "ssr": true
+    }]
+  ]
 }

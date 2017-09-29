@@ -12,7 +12,7 @@ export default () => (
       <a href="mailto:jonah@jough.in" target="_top">
         <Button>Contact Me</Button>
       </a>
-      <a href="/static/documents/jonah-joughin-cv.pdf" download>
+      <a href="/static/pdf/jonah-joughin-cv.pdf" download>
         <Button>Download CV</Button>
       </a>
     </ButtonGroup>

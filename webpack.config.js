@@ -4,6 +4,12 @@ var path = require('path');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
+  node: {
+    console: true,
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty'
+  },
   entry: APP_DIR + '/client.js',
   output: {
     path: APP_DIR + '/static/js',
