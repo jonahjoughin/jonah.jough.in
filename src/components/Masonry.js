@@ -28,7 +28,6 @@ class Masonry extends React.Component {
       }
     }
     render () {
-      console.log("Projects",this.props.projects);
       return (
         <Root>
           <Title>Projects</Title>
@@ -36,7 +35,6 @@ class Masonry extends React.Component {
             {mapToColumns(this.props.projects || [],this.state.columns).map((col,i) => (
               <Column key={i} hidden={!hasWindow || !this.state.columns}>
                 {col.items.map((child) => {
-                  console.log("Child: ",child);
                   return <MasonryItem data={child} key={child.id}/>
                 })}
               </Column>

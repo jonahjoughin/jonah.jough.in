@@ -25,7 +25,6 @@ const Root = styled.div`
 `
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("Posts!", state.posts.toArray());
   return {
       projects: state.posts.toArray()[0]
   }

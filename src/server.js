@@ -18,7 +18,7 @@ const app = express();
 app.use('/static', express.static(path.join(__dirname, 'static')))
 
 app.use((req,res) => {
-  console.log(req);
+  console.log(req.url);
   getPosts(req,projects => {
     const preloadedState = new StoreRecord({posts: Set.of(projects)});
     res.send(renderFullPage(req.url,preloadedState));
