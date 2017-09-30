@@ -54,7 +54,7 @@ const renderFullPage = (url, preloadedState) => {
         <script>
             window.__PRELOADED_STATE__ = ${JSON.stringify(recordTransit.toJSON(finalState)).replace(/</g, '\\u003c')}
           </script>
-        <script src="/static/js/bundle.js"></script>
+        <script src="/static/js/client.js"></script>
       </body>
     </html>`)
 }
