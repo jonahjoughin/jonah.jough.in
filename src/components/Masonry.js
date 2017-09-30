@@ -11,6 +11,7 @@ class Masonry extends React.Component {
     }
     updateDimensions() {
       if (hasWindow()) {
+        console.log("OffsetWidth: ", this.el.offsetWidth)
         this.setState({columns: numberOfColumns(window.innerWidth)});
       }
     }
@@ -29,7 +30,7 @@ class Masonry extends React.Component {
     }
     render () {
       return (
-        <Root>
+        <Root ref={(el) => { this.el = el; }}>
           <Title>Projects</Title>
           <Content>
             {mapToColumns(this.props.projects || [],this.state.columns).map((col,i) => (
@@ -107,5 +108,6 @@ const mapToColumns = (children,n) => {
       columns[shortest].items.push(item);
       columns[shortest].height += (item.height+30);
     })
+  columns = columns.sort((a,b) => a.height < b.height);
   return columns;
 }

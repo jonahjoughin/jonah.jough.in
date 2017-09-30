@@ -37,7 +37,7 @@
     "webpack": "^3.5.5"
   },
   "scripts": {
-    "server": "babel-node dist/server",
+    "server": "node dist/server",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p",
     "dev": "node_modules/.bin/webpack -d --watch"
   }
