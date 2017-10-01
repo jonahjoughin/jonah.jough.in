@@ -56,7 +56,7 @@ class Rose {
           this._points[this.mod(i+1,this.l)].x,
           this._points[this.mod(i+1,this.l)].y,
           this._points[this.mod(i+2,this.l)].x,
-          this._points[this.mod(i+2,this.l)].y,
+          this._points[this.mod(i+2,this.l)].y
         )
       }
     }

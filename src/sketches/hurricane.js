@@ -176,7 +176,6 @@ const hurricane = p => {
 
   }
   p.keyPressed = () => {
-    console.log(p.keyCode);
     if (p.keyCode == p.RIGHT_ARROW) ps.setMode(Math.min(ps.getMouseVectors.length-1,ps.mode+1));
     else if (p.keyCode == p.LEFT_ARROW) ps.setMode(Math.max(0,mode-1));
     else if (p.keyCode == p.UP_ARROW) ps.multiplier = Math.min(3,ps.multiplier+0.1);
