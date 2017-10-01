@@ -1,23 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import MasonryItem from './MasonryItem'
+import MasonryColumn from './MasonryColumn'
 
 class Masonry extends React.Component {
 
     constructor(props) {
       super(props)
-      this.state = {}
+      this.state = {columns: null, visible: false}
     }
     updateDimensions() {
       if (hasWindow()) {
-        this.setState({columns: numberOfColumns(window.innerWidth)});
+        this.setState({columns: numberOfColumns(window.innerWidth),visible:true});
       }
     }
     componentWillMount() {
         this.updateDimensions();
     }
     componentDidMount() {
+      this.forceUpdate();
       if (hasWindow()) {
         window.addEventListener("resize", this.updateDimensions.bind(this));
       }
@@ -27,19 +28,18 @@ class Masonry extends React.Component {
         window.removeEventListener("resize", this.updateDimensions.bind(this));
       }
     }
+    shouldComponentUpdate() {
+      return true;
+    }
     render () {
       return (
         <Root>
           <Title>Projects</Title>
-          <Content>
-            {mapToColumns(this.props.projects || [],this.state.columns).map((col,i) => (
-              <Column key={i} hidden={!hasWindow || !this.state.columns}>
-                {col.items.map((child) => {
-                  return <MasonryItem data={child} key={child.id}/>
-                })}
-              </Column>
-            ))}
-          </Content>
+          {this.state.visible &&
+            <Content>
+                {mapToColumns(this.props.projects,this.state.columns)}
+            </Content>
+          }
         </Root>
       )
     }
@@ -78,11 +78,8 @@ const Content = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0px 15px;
-
 `
-
 const Column = styled.div`
-  display: ${props => props.hidden ? 'none' : 'block'};
   margin: 0px 15px;
   flex: 1;
 `
@@ -101,12 +98,14 @@ const numberOfColumns = width => {
 
 const mapToColumns = (children,n) => {
 
-  var columns = Array(n || 1).fill().map(v => ({height:0,items:[]}))
+  var columns = Array(n || 1).fill().map((v,i) => ({height:0,items:[],id:i}))
     children.forEach(item => {
       const shortest = columns.reduce((minI, x, i, arr) => x.height < arr[minI].height ? i : minI, 0);
       columns[shortest].items.push(item);
       columns[shortest].height += (item.height+30);
     })
-  columns = columns.sort((a,b) => a.height <= b.height);
-  return columns;
+  //columns = columns.sort((a,b) => a.height <= b.height);
+  return columns.map(col => (
+    <MasonryColumn items={col.items} key={col.id} />
+  ))
 }

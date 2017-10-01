@@ -10,6 +10,7 @@ export default ({light,onLeft,onRight}) => (
 
 
 const Left = styled.div`
+  cursor: hand; cursor: pointer;
   height: 50px;
   width: 50px;
   margin-right: 10px;
@@ -20,6 +21,7 @@ const Left = styled.div`
   float: left;
 `
 const Right = styled.div`
+  cursor: hand; cursor: pointer;
   height: 50px;
   width: 50px;
   margin-left: 10px;
